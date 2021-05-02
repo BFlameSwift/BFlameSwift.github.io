@@ -615,11 +615,11 @@ post:
     enable: false
 
     # 开启后，只有在文章 Front-matter 里指定 `mermaid: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
-    # If true, only set `mermaid: true` in Front-mattertheme:will enable mermaid, to load faster when the page does not contain mermaid
-    specific: False
+    # If true, only set `mermaid: true` in Front-matter will enable mermaid, to load faster when the page does not contain mermaid
+    specific: false
 
     # See: http://mermaid-js.github.io/mermaid/
-    options: { theme: 'fluid' }
+    options: { theme: 'default' }
 
   # 评论插件
   # Comment plugin
@@ -647,7 +647,7 @@ utterances:
   repo:
   issue_term: pathname
   label: utterances
-  theme: fluid
+  theme: github-light
   theme_dark: github-dark
   crossorigin: anonymous
 

@@ -1,7 +1,7 @@
+.idea/
 .DS_Store
-Thumbs.db
-db.json
 *.log
+*.iml
+yarn.lock
+package-lock.json
 node_modules/
-public/
-.deploy*/
