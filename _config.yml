@@ -619,7 +619,7 @@ post:
     specific: false
 
     # See: http://mermaid-js.github.io/mermaid/
-    options: { theme: 'fluid' }
+    options: { theme: 'default' }
 
   # 评论插件
   # Comment plugin
