@@ -1,7 +1,7 @@
 ---
-title: Combinatorial mathematics-3
+title:  容斥原理与鸽巢原理初步
 date: 2021-05-03 10:46:13
-tags: 
+comment: 'valine'
 ---
 
 # 容斥原理与鸽巢原理
@@ -9,6 +9,8 @@ tags:
 ## 3.1 容斥原理引论
 
 主要研究有限集合的交或者并的计数
+
+
 $$
 \subset \ \cup\ \cap
 $$
@@ -42,7 +44,7 @@ $|A_1 \cup \cdots \cup A_n| = |A_1|+\cdots +| A_n|-(|A_1\cap A_2|+\cdots ) +(|A_
 
 例题2：不超过120的素数的个数
 
-### 3.4 再谈错排
+## 3.4 再谈错排
 
 根据DeMorgan定律$\overline{A_1\cup\cdots\cup A_n} = \overline A_1\cap \cdots \cap \overline A_n$
 
@@ -56,7 +58,7 @@ $D_n = n!(1-\frac 1{1!} +\frac 1{2!}+ +(-1)^n\frac 1{n!})$
 
 例题：对于8个字母$ABCDEFGH$的全排列中，求使得$A,C,E,G$四个字母不在原来位置上的错排数目
 
-### 3.5 棋盘多项式与有限制排列
+## 3.5 棋盘多项式与有限制排列
 
 基本表示：
 
@@ -104,7 +106,7 @@ $R(C)  = \sum^n_{k=0}C(n,k)x^i$
 
 代入公式即：$n!-\frac{n}{1！}(n-1)!+\frac{n(n-1)}{2!}\times(n-2)！+\cdots \\= n!(1-\frac{1}{1!}+\frac{1}{2!}+(-1)^n\frac{1}{n!})$
 
-### 3.6 广义的容斥原理
+## 3.6 广义的容斥原理
 
 - 容斥原理的推广
   - 只选一个？
@@ -136,7 +138,7 @@ $R(C)  = \sum^n_{k=0}C(n,k)x^i$
 
 其中$|A_1| =(y_1+6+x_2+x_3)\to C(3+9-1,9)=55$
 
-### 3.7 Mobius反演
+## 3.7 Mobius反演
 
 - 基本思想：$\{a_n\}$ 易算，$\{b_n\}$不易算，$\{a_n\}$ 可用$\{b_n\}$表示，利用反演，将$\{b_n\}$用$\{a_n\}$表示
 
