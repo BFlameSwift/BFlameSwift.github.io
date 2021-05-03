@@ -2,6 +2,7 @@
 title:  容斥原理与鸽巢原理初步
 date: 2021-05-03 10:46:13
 comment: 'valine'
+math: true
 ---
 
 # 容斥原理与鸽巢原理
