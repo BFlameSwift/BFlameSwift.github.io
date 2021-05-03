@@ -1,10 +1,21 @@
-# 终于更换好主题了
+# [BFlame Blog](https://bflameswift.github.io/)
 
-##### ly yyd屑！！
+### 介绍
 
-记录一下自己一直犯得蠢错误，
+* Blog使用Hexo的fluid主题
+* 目前刚刚创建还没有很多的改动
 
-原来的fluid教程上让我建立` _config.fluid.yml       `文件，并吧` _config.yml       `的复制过去，但是我是直接把官方文档的` _config.yml       `文件复制过来了 ，导致一直无法更改主题。。。
 
-比较简单的事情弄了四个多小时。。
 
+
+
+
+
+
+
+
+
+## 致谢
+
+1. 感谢Hexo 和 fluid 的开发人员的提供
+2. 感谢roife与hzh通过观看他们的博客对这次创建有很大帮助
