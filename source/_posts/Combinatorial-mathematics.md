@@ -2,7 +2,6 @@
 title:  容斥原理与鸽巢原理初步
 layout: note
 date: 2021-05-03 10:46:13
-comments: true
 comment: 'valine'
 math: true
 tags: 组合数学
