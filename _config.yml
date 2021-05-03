@@ -104,4 +104,4 @@ theme: fluid
 deploy:
   type: git
   repo: https://github.com/BFlameSwift/BFlameSwift.github.io.git
-  branch: newtest
+  branch: main

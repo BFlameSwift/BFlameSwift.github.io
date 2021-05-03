@@ -9,7 +9,9 @@ tags:
 ## 3.1 容斥原理引论
 
 主要研究有限集合的交或者并的计数
-
+$$
+\subset \ \cup\ \cap
+$$
 ### DeMorgan定理
 
 $\overline A \cup \overline B = \overline{A\cap B}$
