@@ -254,7 +254,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年6月24日 下午
+                  本文最后更新于：2021年7月15日 晚上
                 
               </p>
             
@@ -315,23 +315,26 @@
                   
                 
                 
-  <div id="valine"></div>
+  <div id="waline"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
-        new Valine({
-          el: "#valine",
-          app_id: "uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz",
-          app_key: "q4BOgVF8tftjBDOXiaQmWIMh",
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.14.8/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
           placeholder: "说点什么",
           path: window.location.pathname,
           avatar: "retro",
           meta: ["nick","mail","link"],
           pageSize: "10",
           lang: "zh-CN",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "https://uot6hb5t.lc-cn-n1-shared.com",
+          highlight: true,
+          serverURL: "https://blogcomment-alpha.vercel.app/",
+          avatarCDN: "",
+          avatarForce: false,
+          requiredFields: [],
+          emojiCDN: "",
+          emojiMaps: {},
+          anonymous: null,
         });
       });
     });
