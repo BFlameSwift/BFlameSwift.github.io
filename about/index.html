@@ -323,18 +323,18 @@
         
       
       
-  <div id="valine"></div>
+  <div id="waline"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function() {
         var options = Object.assign(
-          {"appId":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","appKey":"q4BOgVF8tftjBDOXiaQmWIMh","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://uot6hb5t.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":true,"requiredFields":[],"appid":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","appkey":"q4BOgVF8tftjBDOXiaQmWIMh"},
+          {"serverURL":"https://blogcomment-alpha.vercel.app/","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":true,"avatarCDN":"https://sdn.geekzu.org/avatar/","avatarForce":true,"requiredFields":[],"emojiCDN":"","emojiMaps":{},"anonymous":null,"visitor":true},
           {
-            el: "#valine",
+            el: '#waline',
             path: window.location.pathname
           }
         )
-        new Valine(options);
+        new Waline(options);
       });
     });
   </script>
