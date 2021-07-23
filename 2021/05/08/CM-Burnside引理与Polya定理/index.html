@@ -14,7 +14,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="『组合数学』4. Burnside引理 与Polya定理">
+  <meta name="description" content="实际中比较有用的Polya定理，和解决一些比较有意思的组合问题">
   <meta name="author" content="ly">
   <meta name="keywords" content="">
   
@@ -254,13 +254,12 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年6月24日 下午
+                  本文最后更新于：2021年7月23日 下午
                 
               </p>
             
             <div class="markdown-body">
               <h1 id="组合数学4-burnside引理-与polya定理"><a class="markdownIt-Anchor" href="#组合数学4-burnside引理-与polya定理"></a> 『组合数学』4. Burnside引理 与Polya定理</h1>
-<!-- more -->
 <h2 id="群的概念"><a class="markdownIt-Anchor" href="#群的概念"></a> 群的概念</h2>
 <ul>
 <li>定义：给定集合<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>=</mo><mo stretchy="false">{</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">G=\{a,b,c,d\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mclose">}</span></span></span></span>和集合<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span>的二元运算  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44445em;vertical-align:0em;"></span><span class="mord">⋅</span></span></span></span> 并满足下面四个条件：
@@ -644,7 +643,7 @@ a_2&amp;a_2\cdots a_1
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/09/%E6%8F%92%E5%80%BC%E4%B8%8E%E9%80%BC%E8%BF%91/">
+                      <a href="/2021/05/09/NA-%E6%8F%92%E5%80%BC%E4%B8%8E%E9%80%BC%E8%BF%91/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">插值与逼近</span>
                         <span class="visible-mobile">上一篇</span>
@@ -654,7 +653,7 @@ a_2&amp;a_2\cdots a_1
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/05/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E5%8F%8A%E5%85%B6%E8%BF%AD%E4%BB%A3%E8%A7%A3%E6%B3%95/">
+                      <a href="/2021/05/05/NA-%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E5%8F%8A%E5%85%B6%E8%BF%AD%E4%BB%A3%E8%A7%A3%E6%B3%95/">
                         <span class="hidden-mobile">非线性方程及其迭代解法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -672,18 +671,18 @@ a_2&amp;a_2\cdots a_1
                   
                 
                 
-  <div id="valine"></div>
+  <div id="waline"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function() {
         var options = Object.assign(
-          {"appId":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","appKey":"q4BOgVF8tftjBDOXiaQmWIMh","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://uot6hb5t.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":true,"requiredFields":[],"appid":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","appkey":"q4BOgVF8tftjBDOXiaQmWIMh"},
+          {"serverURL":"https://blogcomment-alpha.vercel.app/","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":true,"avatarCDN":"https://sdn.geekzu.org/avatar/","avatarForce":true,"requiredFields":[],"emojiCDN":"","emojiMaps":{},"anonymous":null,"visitor":true},
           {
-            el: "#valine",
+            el: '#waline',
             path: window.location.pathname
           }
         )
-        new Valine(options);
+        new Waline(options);
       });
     });
   </script>
