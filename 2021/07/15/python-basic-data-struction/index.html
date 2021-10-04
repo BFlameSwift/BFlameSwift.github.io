@@ -26,7 +26,7 @@
 <meta property="og:description" content="Python基础个人笔记，目前仅更新基本的数据结构包含序列、列表、字符串与字典">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-15T09:39:31.000Z">
-<meta property="article:modified_time" content="2021-10-03T12:09:46.505Z">
+<meta property="article:modified_time" content="2021-10-04T01:52:48.575Z">
 <meta property="article:author" content="BFlame">
 <meta property="article:tag" content="Learning Note">
 <meta property="article:tag" content="Introduction">
@@ -216,7 +216,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      undefined 字
+      7.3k 字
     </span>
   
 
@@ -225,7 +225,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      NaN 分钟
+      23 分钟
     </span>
   
 
@@ -266,7 +266,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年10月3日 晚上
+                  本文最后更新于：2021年10月4日 上午
                 
               </p>
             
@@ -421,7 +421,7 @@
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">get</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span></p>
 <p>访问指定键的值，相较于直接访问较为宽松：访问不存在的键返回None</p>
 <p>若存在键与直接访问相同</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>d = &#123;&#125; <br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(d[<span class="hljs-string">&#x27;name&#x27;</span>]) <span class="hljs-comment"># 不用get</span><br>Traceback (most recent call last):  File &quot;&lt;stdin&gt;&quot;, line 1, in ? KeyError: &#x27;name&#x27; <br><span class="hljs-comment"># 而使用get不会这样：</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(d.get(<span class="hljs-string">&#x27;name&#x27;</span>)) <br><span class="hljs-literal">None</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>d[<span class="hljs-string">&#x27;name&#x27;</span>] = <span class="hljs-string">&#x27;Eric&#x27;</span> <br><span class="hljs-meta">&gt;&gt;&gt; </span>d.get(<span class="hljs-string">&#x27;name&#x27;</span>) <br><span class="hljs-string">&#x27;Eric&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>d = &#123;&#125; <br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(d[<span class="hljs-string">&#x27;name&#x27;</span>]) <span class="hljs-comment"># 不用get</span><br>Traceback (most recent call last):  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> ? KeyError: <span class="hljs-string">&#x27;name&#x27;</span> <br><span class="hljs-comment"># 而使用get不会这样：</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(d.get(<span class="hljs-string">&#x27;name&#x27;</span>)) <br><span class="hljs-literal">None</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>d[<span class="hljs-string">&#x27;name&#x27;</span>] = <span class="hljs-string">&#x27;Eric&#x27;</span> <br><span class="hljs-meta">&gt;&gt;&gt; </span>d.get(<span class="hljs-string">&#x27;name&#x27;</span>) <br><span class="hljs-string">&#x27;Eric&#x27;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mi>t</mi><mi>e</mi><mi>m</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">items</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span></span></span></span></p>
