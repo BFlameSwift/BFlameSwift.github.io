@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Go-basic-intruduction</title>
+    <link href="/2021/10/12/Go-basic-intruduction/"/>
+    <url>/2021/10/12/Go-basic-intruduction/</url>
+    
+    <content type="html"><![CDATA[<h1 id="go语言配置"><a class="markdownIt-Anchor" href="#go语言配置"></a> Go语言配置</h1><h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2><p>在官网下载Go <a href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p><p>设置安装目录一路安装即可</p><h2 id="配置环境变量"><a class="markdownIt-Anchor" href="#配置环境变量"></a> 配置环境变量</h2><ul><li><p>配置GOPATH和GOROOT</p><p>其中GOPATH是存放Go的主要路径，</p><ul><li>GOPATH/bin 存放Go install * 命令的文件，后续提到swagger会用到</li></ul><p>GOROOT是Go的根目录</p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled.png" alt="Untitled"></p></li></ul><p>并将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>R</mi><mi>O</mi><mi>O</mi><mi>T</mi><mi mathvariant="normal">/</mi><mi>b</mi><mi>i</mi><mi>n</mi><mi mathvariant="normal">、</mi></mrow><annotation encoding="application/x-tex">GOROOT/bin、</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord">/</span><span class="mord mathdefault">b</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord cjk_fallback">、</span></span></span></span>GOPATH/bin添加系统变量PATH：</p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%201.png" alt="Untitled"></p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%202.png" alt="Untitled"></p><p>现在即可以通过 <code>go version</code> 查看Go语言版本</p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%203.png" alt="Untitled"></p><h3 id="推荐设置"><a class="markdownIt-Anchor" href="#推荐设置"></a> <strong>推荐设置</strong></h3><ul><li><p>Go env setting</p><p><code>go env -w GOPROXY=https://goproxy.cn,direct</code></p><p>七牛设置的代理，设置后可大大提升安装包的速度！！！</p></li><li><p>IDE配置</p><p>主要有Goland和Vscode</p><p>推荐使用vscode主要插件:Go , 使用后可自动删除未使用的import 并处理代码格式</p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%204.png" alt="Untitled"></p><p>安装后可使用 <code>ctrl+shift+P</code>  输入从而更新包 当然也可以使用 <code>go get -u all</code> 来更新Go</p></li></ul><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%205.png" alt="Untitled"></p><h2 id="helloworld"><a class="markdownIt-Anchor" href="#helloworld"></a> Hello，world！！</h2><p>— 一切的开始</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>fmt.Println(<span class="hljs-string">&quot;Hello, world&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure><p>使用 <code>go run main.go</code> (文件名） 即可运行，注意运行单文件的包名需要是main</p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%206.png" alt="Untitled"></p><p>好了，你已经会写 <code>hello, world</code> 了，那么现在来用Go语言完成本学习的学术分享平台吧！！！（×）</p><h2 id="go-web开发"><a class="markdownIt-Anchor" href="#go-web开发"></a> Go web开发</h2><p>主要使用Gin框架，下图是Go开发中主要的项目结构，不过多介绍了</p><p><img src="/2021/10/12/Go-basic-intruduction/Untitled%207.png" alt="Untitled"></p><p>PS 图来自《Go高级编程》 5.7 大型Web项目分层(侵删）</p><p>下面使用一个Gin的简单程序</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;github.com/gin-gonic/gin&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>r := gin.Default()<br>r.GET(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *gin.Context)</span></span> &#123;<br>c.JSON(<span class="hljs-number">200</span>, gin.H&#123;<br><span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;success&quot;</span>,<br>&#125;)<br>&#125;)<br>r.Run(<span class="hljs-string">&quot;:8000&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure><p>如果项目中不存在 <code>go.mod</code> 文件需要使用 <code>go mod init</code> 生成mod文件，而后使用 <code>go mod tidy</code> 安装依赖。使用 <code>go run main.go</code> 运行即可，访问 <code>localhost:8000/</code> 查看到message 表示链接成功</p><p>好了，你已经真正的学会了如何用 <code>Gin</code> 开发Web程序，下面开始你的Go之旅吧！！</p><ul><li><p><strong>展望</strong>（小声）</p><p>后面可能会把Go配置Elastic Search的过程弄一下，以及在涉及到 Go处理并发时会出一下学习笔记</p></li></ul><h2 id="资料推荐"><a class="markdownIt-Anchor" href="#资料推荐"></a> 资料推荐</h2><p><s>上面的在网上随便就能找来，没点自己的东西怎么行</s></p><p>本人也是才入门，好多东西都是边学边写，所以234参考都是目前写的时候参考的</p><ol><li>GO语言圣经，入门语法必备：《Go程序设计语言》</li><li>《Go语言实战》</li><li>《Go Web编程》 基本覆盖开发需求：session，请求、数据库、部署。目前当做参考书来用</li><li>《Go语言高级编程》 书的附录A中提到的Go常见坑很实用</li><li>项目推荐 ：学长的项目，带你直接了解Go项目内部的结构！<a href="https://github.com/Durian-HiTech/durian-go">https://github.com/Durian-HiTech/durian-go</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Configs</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Introduction</tag>
+      
+      <tag>Configs</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Optimization Convex set</title>
     <link href="/2021/10/09/Optimization-Convex-set/"/>
     <url>/2021/10/09/Optimization-Convex-set/</url>
