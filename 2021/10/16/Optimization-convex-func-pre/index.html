@@ -15,20 +15,17 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="对凸函数做一些理论（定义）准备，为后面正式的凸函数打下基础。并意识到应该精简部分内容了。。">
   <meta name="author" content="BFlame">
   <meta name="keywords" content="">
-  <meta name="description" content="对凸函数做一些理论（定义）准备，为后面正式的凸函数打下基础。并意识到应该精简部分内容了。。">
+  
+    <meta name="description" content="对凸函数做一些理论（定义）准备，为后面正式的凸函数打下基础。并意识到应该精简部分内容了。。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Optimization-convex-func-pre">
 <meta property="og:url" content="http://example.com/2021/10/16/Optimization-convex-func-pre/index.html">
 <meta property="og:site_name" content="BFlameSwift&#39;s Blog">
 <meta property="og:description" content="对凸函数做一些理论（定义）准备，为后面正式的凸函数打下基础。并意识到应该精简部分内容了。。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/10/16/Optimization-convex-func-pre/Hessian_Matrix.png">
-<meta property="og:image" content="http://example.com/2021/10/16/Optimization-convex-func-pre/%E4%B8%8D%E7%AD%89%E5%BC%8F1%E8%AF%81%E6%98%8E.png">
-<meta property="og:image" content="http://example.com/2021/10/16/Optimization-convex-func-pre/%E7%9F%A9%E9%98%B5%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E5%AF%BC%E6%95%B0.png">
-<meta property="og:image" content="http://example.com/2021/10/16/Optimization-convex-func-pre/Untitled.png">
+<meta property="og:image" content="http://example.com/img/article/math/convex%20func_img.png">
 <meta property="article:published_time" content="2021-10-16T10:50:41.000Z">
 <meta property="article:modified_time" content="2021-10-16T11:21:34.695Z">
 <meta property="article:author" content="BFlame">
@@ -36,7 +33,8 @@
 <meta property="article:tag" content="最优化理论">
 <meta property="article:tag" content="Convex">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2021/10/16/Optimization-convex-func-pre/Hessian_Matrix.png">
+<meta name="twitter:image" content="http://example.com/img/article/math/convex%20func_img.png">
+  
   
   <title>Optimization-convex-func-pre - BFlameSwift&#39;s Blog</title>
 
@@ -75,7 +73,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -669,7 +667,7 @@ f(\theta x_1+(1-\theta )x_2)\le \theta y_1+(1-\theta)y_2$$</p>
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

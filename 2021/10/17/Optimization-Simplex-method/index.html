@@ -15,17 +15,17 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="运筹学初始的线性规划相关的单纯型法，同属于最优化方法的内容">
   <meta name="author" content="BFlame">
   <meta name="keywords" content="">
-  <meta name="description" content="运筹学初始的线性规划相关的单纯型法，同属于最优化方法的内容">
+  
+    <meta name="description" content="运筹学初始的线性规划相关的单纯型法，同属于最优化方法的内容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Optimization Simplex method">
 <meta property="og:url" content="http://example.com/2021/10/17/Optimization-Simplex-method/index.html">
 <meta property="og:site_name" content="BFlameSwift&#39;s Blog">
 <meta property="og:description" content="运筹学初始的线性规划相关的单纯型法，同属于最优化方法的内容">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/10/17/Optimization-Simplex-method/image-20211017001354832.png">
+<meta property="og:image" content="http://example.com/img/article/math/Operations%20research.png">
 <meta property="article:published_time" content="2021-10-16T16:09:22.000Z">
 <meta property="article:modified_time" content="2021-10-16T16:15:31.395Z">
 <meta property="article:author" content="BFlame">
@@ -33,7 +33,8 @@
 <meta property="article:tag" content="最优化理论">
 <meta property="article:tag" content="运筹学">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2021/10/17/Optimization-Simplex-method/image-20211017001354832.png">
+<meta name="twitter:image" content="http://example.com/img/article/math/Operations%20research.png">
+  
   
   <title>Optimization Simplex method - BFlameSwift&#39;s Blog</title>
 
@@ -72,7 +73,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -228,7 +229,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      2 分钟
     </span>
   
 
@@ -665,7 +666,7 @@ x\ge 0
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

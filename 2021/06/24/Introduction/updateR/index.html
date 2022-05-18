@@ -15,36 +15,24 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="简单记录一下自己的R语言安装配置过程">
   <meta name="author" content="BFlame">
   <meta name="keywords" content="">
-  <meta name="description" content="简单记录一下自己的R语言安装配置过程">
+  
+    <meta name="description" content="简单记录一下自己的R语言安装配置过程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="R语言环境配置小记">
 <meta property="og:url" content="http://example.com/2021/06/24/Introduction/updateR/index.html">
 <meta property="og:site_name" content="BFlameSwift&#39;s Blog">
 <meta property="og:description" content="简单记录一下自己的R语言安装配置过程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625100006757.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210624205708434.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625100439309.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625101937209.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625102016950.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625104201640.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625104404802.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625110516990.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625110631506.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625110933893.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625111057371.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625111207547.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625111228886-1624703000066.png">
-<meta property="og:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625114056067.png">
+<meta property="og:image" content="http://example.com/img/article/configs/R.png">
 <meta property="article:published_time" content="2021-06-24T12:53:30.000Z">
 <meta property="article:modified_time" content="2021-10-04T15:08:31.697Z">
 <meta property="article:author" content="BFlame">
 <meta property="article:tag" content="Configs">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2021/06/24/Introduction/updateR/image-20210625100006757.png">
+<meta name="twitter:image" content="http://example.com/img/article/configs/R.png">
+  
   
   <title>R语言环境配置小记 - BFlameSwift&#39;s Blog</title>
 
@@ -83,7 +71,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -239,7 +227,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      2 分钟
     </span>
   
 
@@ -605,7 +593,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>
