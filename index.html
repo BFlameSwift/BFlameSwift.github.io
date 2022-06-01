@@ -27,15 +27,21 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
   <title>BFlameSwift&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
 
-<!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
@@ -44,21 +50,40 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/configs/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"uot6Hb5TpPtjLvPQsIXLj9xH-gzGzoHsz","app_key":"q4BOgVF8tftjBDOXiaQmWIMh","server_url":"https://uot6hb5t.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
       <strong>BFlame</strong>
@@ -152,6 +177,7 @@
               &nbsp;<i class="iconfont icon-search"></i>&nbsp;
             </a>
           </li>
+          
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -164,34 +190,40 @@
   </div>
 </nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/configs/TheStarryNight.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Never extinguish the Flame in my heart">
-              
-            </span>
+  
 
-            
-          </div>
-
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/configs/TheStarryNight.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
+            <span id="subtitle" data-typed-text="Never extinguish the Flame in my heart"></span>
           
         </div>
+
+        
       </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
+  </div>
+</div>
+
+</div>
+
   </header>
 
   <main>
     
       <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
+        <div id="board"
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
@@ -218,12 +250,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/06/26/some-plan/" target="_self">
+      <a class="index-excerpt" href="/2021/06/26/some-plan/" target="_self">
+        <div>
           
           博客的管理计划目前主要用这个管理   https:&#x2F;&#x2F;t.im&#x2F;lp51
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -235,18 +267,32 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Configs/">Configs</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Configs/" class="category-chain-item">Configs</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Introduction/">Introduction</a>
+              <a href="/tags/Introduction/">#Introduction</a>
             
           </div>
         
@@ -258,7 +304,78 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/10/17/Optimization-Simplex-method/" target="_self">
+        <a href="/2022/06/01/Review/modern-algebra/" target="_self">
+          <img src="/img/article/math/GRF.jpg" srcset="/img/configs/loading.gif" lazyload alt="近世代数定义复习 1">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/01/Review/modern-algebra/" target="_self">
+          近世代数定义复习 1
+        </a>
+      </h1>
+
+      <a class="index-excerpt" href="/2022/06/01/Review/modern-algebra/" target="_self">
+        <div>
+          
+          近世代数考前对定义的复习回顾
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-01 23:39" pubdate>
+              2022-06-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Machine-Learning/" class="category-chain-item">Machine Learning</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Math/">#Math</a>
+            
+              <a href="/tags/Learning-Note/">#Learning Note</a>
+            
+              <a href="/tags/Introduction/">#Introduction</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/10/17/Optimization/Optimization-Simplex-method/" target="_self">
           <img src="/img/article/math/Operations%20research.png" srcset="/img/configs/loading.gif" lazyload alt="Optimization Simplex method">
         </a>
       </div>
@@ -266,17 +383,17 @@
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/10/17/Optimization-Simplex-method/" target="_self">
+        <a href="/2021/10/17/Optimization/Optimization-Simplex-method/" target="_self">
           Optimization Simplex method
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/10/17/Optimization-Simplex-method/" target="_self">
+      <a class="index-excerpt" href="/2021/10/17/Optimization/Optimization-Simplex-method/" target="_self">
+        <div>
           
           运筹学初始的线性规划相关的单纯型法，同属于最优化方法的内容
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -288,22 +405,36 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ClassNote/">ClassNote</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ClassNote/" class="category-chain-item">ClassNote</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Math/">#Math</a>
             
-              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">最优化理论</a>
+              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">#最优化理论</a>
             
-              <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/">运筹学</a>
+              <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/">#运筹学</a>
             
           </div>
         
@@ -315,7 +446,7 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/10/16/Optimization-convex-func-pre/" target="_self">
+        <a href="/2021/10/16/Optimization/Optimization-convex-func-pre/" target="_self">
           <img src="/img/article/math/convex%20func_img.png" srcset="/img/configs/loading.gif" lazyload alt="Optimization-convex-func-pre">
         </a>
       </div>
@@ -323,17 +454,17 @@
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/10/16/Optimization-convex-func-pre/" target="_self">
+        <a href="/2021/10/16/Optimization/Optimization-convex-func-pre/" target="_self">
           Optimization-convex-func-pre
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/10/16/Optimization-convex-func-pre/" target="_self">
+      <a class="index-excerpt" href="/2021/10/16/Optimization/Optimization-convex-func-pre/" target="_self">
+        <div>
           
           对凸函数做一些理论（定义）准备，为后面正式的凸函数打下基础。并意识到应该精简部分内容了。。
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -345,22 +476,36 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ClassNote/">ClassNote</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ClassNote/" class="category-chain-item">ClassNote</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Math/">#Math</a>
             
-              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">最优化理论</a>
+              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">#最优化理论</a>
             
-              <a href="/tags/Convex/">Convex</a>
+              <a href="/tags/Convex/">#Convex</a>
             
           </div>
         
@@ -385,12 +530,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/10/12/Introduction/Go-basic-intruduction/" target="_self">
+      <a class="index-excerpt" href="/2021/10/12/Introduction/Go-basic-intruduction/" target="_self">
+        <div>
           
           简单记录一下Go的基本入门
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -402,20 +547,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Configs/">Configs</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Configs/" class="category-chain-item">Configs</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Introduction/">Introduction</a>
+              <a href="/tags/Introduction/">#Introduction</a>
             
-              <a href="/tags/Configs/">Configs</a>
+              <a href="/tags/Configs/">#Configs</a>
             
           </div>
         
@@ -427,7 +586,7 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/10/09/Optimization-Convex-set/" target="_self">
+        <a href="/2021/10/09/Optimization/Optimization-Convex-set/" target="_self">
           <img src="/img/article/math/convex%20set.png" srcset="/img/configs/loading.gif" lazyload alt="Optimization Convex set">
         </a>
       </div>
@@ -435,17 +594,17 @@
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/10/09/Optimization-Convex-set/" target="_self">
+        <a href="/2021/10/09/Optimization/Optimization-Convex-set/" target="_self">
           Optimization Convex set
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/10/09/Optimization-Convex-set/" target="_self">
+      <a class="index-excerpt" href="/2021/10/09/Optimization/Optimization-Convex-set/" target="_self">
+        <div>
           
           介绍了凸集相关的基本定义，以及保证集合为凸集的基本运算，后面介绍了凸集应用的两个定理。最后列了部分作业结果以及参考链接
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -457,22 +616,36 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ClassNote/">ClassNote</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ClassNote/" class="category-chain-item">ClassNote</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Math/">#Math</a>
             
-              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">最优化理论</a>
+              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">#最优化理论</a>
             
-              <a href="/tags/Convex/">Convex</a>
+              <a href="/tags/Convex/">#Convex</a>
             
           </div>
         
@@ -484,7 +657,7 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/10/04/Optimization-pre/" target="_self">
+        <a href="/2021/10/04/Optimization/Optimization-pre/" target="_self">
           <img src="/img/article/math/Optimization_Z.Wen.png" srcset="/img/configs/loading.gif" lazyload alt="Optimization pre">
         </a>
       </div>
@@ -492,17 +665,17 @@
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/10/04/Optimization-pre/" target="_self">
+        <a href="/2021/10/04/Optimization/Optimization-pre/" target="_self">
           Optimization pre
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/10/04/Optimization-pre/" target="_self">
+      <a class="index-excerpt" href="/2021/10/04/Optimization/Optimization-pre/" target="_self">
+        <div>
           
           主要为最优化这门课程做课前准备，写一些推荐链接，参考资源之类
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -514,20 +687,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ClassNote/">ClassNote</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ClassNote/" class="category-chain-item">ClassNote</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Math/">#Math</a>
             
-              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">最优化理论</a>
+              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">#最优化理论</a>
             
           </div>
         
@@ -552,12 +739,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/07/23/Numerical%20Analysis/NA-QR%E6%96%B9%E6%B3%95/" target="_self">
+      <a class="index-excerpt" href="/2021/07/23/Numerical%20Analysis/NA-QR%E6%96%B9%E6%B3%95/" target="_self">
+        <div>
           
           『数值分析』3矩阵特征值与特征向量的几种方法求解
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -569,20 +756,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ClassNote/">ClassNote</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ClassNote/" class="category-chain-item">ClassNote</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Math/">#Math</a>
             
-              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">#数值分析</a>
             
           </div>
         
@@ -607,12 +808,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/07/23/Numerical%20Analysis/NA-Eigenvalues-and-Eigenvectors/" target="_self">
+      <a class="index-excerpt" href="/2021/07/23/Numerical%20Analysis/NA-Eigenvalues-and-Eigenvectors/" target="_self">
+        <div>
           
           『数值分析』3矩阵特征值与特征向量的几种方法求解
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -624,20 +825,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/ClassNote/">ClassNote</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ClassNote/" class="category-chain-item">ClassNote</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Math/">Math</a>
+              <a href="/tags/Math/">#Math</a>
             
-              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">数值分析</a>
+              <a href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">#数值分析</a>
             
           </div>
         
@@ -662,12 +877,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2021/07/20/ml-regression/" target="_self">
+      <a class="index-excerpt" href="/2021/07/20/ml-regression/" target="_self">
+        <div>
           
           关于机器学习中回归分析的部分笔记与简单推导
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -679,77 +894,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Machine-Learning/">Machine Learning</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Machine-Learning/" class="category-chain-item">Machine Learning</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Learning-Note/">Learning Note</a>
+              <a href="/tags/Learning-Note/">#Learning Note</a>
             
-              <a href="/tags/Introduction/">Introduction</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/07/15/Introduction/python-basic-data-struction/" target="_self">
-          <img src="/img/article/Other/Python-Data-Structures.png" srcset="/img/configs/loading.gif" lazyload alt="Python基础知识">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/15/Introduction/python-basic-data-struction/" target="_self">
-          Python基础知识
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/15/Introduction/python-basic-data-struction/" target="_self">
-          
-          Python基础个人笔记，目前仅更新基本的数据结构包含序列、列表、字符串与字典
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-15 17:39" pubdate>
-              2021-07-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Language/">Language</a>
-            
-              <a href="/categories/Language/Python/">Python</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Learning-Note/">Learning Note</a>
-            
-              <a href="/tags/Introduction/">Introduction</a>
+              <a href="/tags/Introduction/">#Introduction</a>
             
           </div>
         
@@ -794,57 +966,59 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
     </div>
   </div>
 </div>
+
     
 
     
   </main>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
-  </div>
+  <footer>
+    <div class="footer-inner">
   
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- LeanCloud 统计PV -->
-        <span id="leancloud-site-pv-container" style="display: none">
-            总访问量 
-            <span id="leancloud-site-pv"></span>
-             次
-          </span>
-      
-      
-        <!-- LeanCloud 统计UV -->
-        <span id="leancloud-site-uv-container" style="display: none">
-            总访客数 
-            <span id="leancloud-site-uv"></span>
-             人
-          </span>
-      
-
-    
-  </div>
-
-
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
   
 
   
-</footer>
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
 
+  
+</div>
 
-  <!-- SCRIPTS -->
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
   
   <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
@@ -863,10 +1037,41 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
 
-  <script  src="/js/local-search.js" ></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
 
@@ -876,60 +1081,24 @@
 
 
 
-  
 
-
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="/js/leancloud.js" ></script>
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
 
 
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
 <script  src="/js/boot.js" ></script>
 
 
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
