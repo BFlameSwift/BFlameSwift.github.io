@@ -29,35 +29,6 @@
   
   
   <entry>
-    <title>近世代数定义复习 1</title>
-    <link href="/2022/06/01/Review/modern-algebra/"/>
-    <url>/2022/06/01/Review/modern-algebra/</url>
-    
-    <content type="html"><![CDATA[<h1 id="近世代数复习-1"><a class="markdownIt-Anchor" href="#近世代数复习-1"></a> 近世代数复习 1</h1><p>​在朋友圈看到了秋月对近视代数概念的整理，猛的想起我还啥也不会（×），</p><p>模仿一下形式整理出近世代数（张禾瑞）这本书的基本概念，以供个人复习马上的期末考试使用。</p><h2 id="基本概念"><a class="markdownIt-Anchor" href="#基本概念"></a> 基本概念</h2><p>基础概念：笛卡尔积、映射、象、原象</p><p><strong>定义1</strong>：代数运算，对非空集合<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>A</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">A_1...A_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p><h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1><ol><li><a href="https://suzumiyaakizuki.github.io/post/chou-xiang-dai-shu-ding-yi-zheng-li-di-yi-dan/">凉宫秋月的博客</a></li></ol>]]></content>
-    
-    
-    <categories>
-      
-      <category>Machine Learning</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Math</tag>
-      
-      <tag>Learning Note</tag>
-      
-      <tag>Introduction</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Optimization Simplex method</title>
     <link href="/2021/10/17/Optimization/Optimization-Simplex-method/"/>
     <url>/2021/10/17/Optimization/Optimization-Simplex-method/</url>
