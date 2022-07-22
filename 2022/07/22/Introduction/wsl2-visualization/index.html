@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/article/configs/figlet-WSL-2-IS-AWESOME!.png">
 <meta property="article:published_time" content="2022-07-22T10:53:30.000Z">
-<meta property="article:modified_time" content="2022-07-22T13:10:46.329Z">
+<meta property="article:modified_time" content="2022-07-22T13:12:57.997Z">
 <meta property="article:author" content="BFlame">
 <meta property="article:tag" content="Configs">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          3k 字
+          3.1k 字
         
       </span>
     
@@ -391,8 +391,9 @@
 <h3 id="启动服务"><a class="markdownIt-Anchor" href="#启动服务"></a> 启动服务</h3>
 <p>若你的wsl未安装<code>systemd</code>,需要手动启动</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo <span class="hljs-regexp">/etc/i</span>nit.d/xrdp start<br></code></pre></td></tr></table></figure>
-<p>若安装了，则可以[6]</p>
+<p>若安装了<code>systemd</code>，则可以[6]使用如下命令：</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo systemctl <span class="hljs-keyword">enable</span> xrdp<br>sudo systemctl <span class="hljs-keyword">restart</span> xrdp<br></code></pre></td></tr></table></figure>
+<p>（不过我这里的开机启动还是不好使，每次使用需要<code>sudo systemctl restart xrdp</code></p>
 <p>连接成功</p>
 <p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722205211789.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722205211789"></p>
 <p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722205304149.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722205304149"></p>
