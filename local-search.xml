@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Wsl2简单配置</title>
+    <link href="/2022/07/22/Introduction/wsl2-visualization/"/>
+    <url>/2022/07/22/Introduction/wsl2-visualization/</url>
+    
+    <content type="html"><![CDATA[<h2 id="wsl2-安装"><a class="markdownIt-Anchor" href="#wsl2-安装"></a> wsl2 安装</h2><ol><li>在<a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">微软网站</a> 手动下载安装包，此处以Ubuntu18为例</li></ol><p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722183926455.png" alt="image-20220722183926455"></p><ol start="2"><li><p>将其移动到你需要的盘，并更改后缀appx为zip，后解压</p><p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722184359221.png" alt="image-20220722184359221"></p></li><li><p>双击运行<code>ubuntu1804.exe</code></p><p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722184525374.png" alt="image-20220722184525374"></p></li><li><p>安装成功，并使用<code>wsl -l -v</code> 查看</p><p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722184635175.png" alt="image-20220722184635175"></p></li></ol><p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722184810793.png" alt="image-20220722184810793"></p><p>若您已经安装在了C盘，还可使用该<a href="https://github.com/DDoSolitary/LxRunOffline">项目</a>，根据说明即可移动。</p><h2 id="图形界面配置"><a class="markdownIt-Anchor" href="#图形界面配置"></a> 图形界面配置</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>Configs</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Configs</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>近世代数定义复习 1</title>
     <link href="/2022/06/01/Review/modern-algebra/"/>
     <url>/2022/06/01/Review/modern-algebra/</url>
