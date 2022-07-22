@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/article/configs/figlet-WSL-2-IS-AWESOME!.png">
 <meta property="article:published_time" content="2022-07-22T10:53:30.000Z">
-<meta property="article:modified_time" content="2022-07-22T12:39:30.563Z">
+<meta property="article:modified_time" content="2022-07-22T13:06:54.370Z">
 <meta property="article:author" content="BFlame">
 <meta property="article:tag" content="Configs">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          2.2k 字
+          3k 字
         
       </span>
     
@@ -376,17 +376,37 @@
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo gnome-session</span><br></code></pre></td></tr></table></figure>
 <p>等待数分钟， gnome 连接完成即可进入Ubuntu GNome桌面环境了</p>
 <p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722202954549.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722202954549"></p>
-<p>不过可能遇到些许问题，下面给出我遇到的两个问题。</p>
+<p>不过可能遇到些许问题，最后给出我遇到的两个问题。</p>
+<h2 id="gnome-xrdp"><a class="markdownIt-Anchor" href="#gnome-xrdp"></a> Gnome + Xrdp</h2>
+<p>参考教程[5]：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/149501381">https://zhuanlan.zhihu.com/p/149501381</a></p>
+<p>个人觉得VcXsrv有些麻烦，尝试下Xrdp</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>sudo apt update<br><span class="hljs-variable">$ </span>sudo apt install -y xfce4 xrdp<br></code></pre></td></tr></table></figure>
+<img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722204606109.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722204606109" style="zoom:67%;">
+<h3 id="修改xrdp默认端口"><a class="markdownIt-Anchor" href="#修改xrdp默认端口"></a> 修改xrdp默认端口</h3>
+<p>由于<code>xrdp</code>安装好后默认配置使用的是和Windows远程桌面相同的<code>3389</code> 端口,为了防止和Windows系统远程桌面冲突,建议修改成其他的端口</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ sudo vim <span class="hljs-regexp">/etc/</span>xrdp/xrdp.ini<br><span class="hljs-comment"># 修改下面这一行,将默认的3389改成其他端口即可</span><br>port=<span class="hljs-number">3390</span><br></code></pre></td></tr></table></figure>
+<h2 id="为当前用户指定登录session类型"><a class="markdownIt-Anchor" href="#为当前用户指定登录session类型"></a> # 为当前用户指定登录session类型</h2>
+<p><strong>注意这一步很重要,如果不设置的话会导致后面远程桌面连接上闪退</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ vim ~/.xsession<br><br><span class="hljs-comment"># 写入下面内容(就一行)</span><br>xfce4-session<br></code></pre></td></tr></table></figure>
+<h3 id="启动服务"><a class="markdownIt-Anchor" href="#启动服务"></a> 启动服务</h3>
+<p>若你的wsl未安装<code>systemd</code>,需要手动启动</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo <span class="hljs-regexp">/etc/i</span>nit.d/xrdp start<br></code></pre></td></tr></table></figure>
+<p>若安装了，则可以[6]</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo systemctl <span class="hljs-keyword">enable</span> xrdp<br>sudo systemctl <span class="hljs-keyword">restart</span> xrdp<br></code></pre></td></tr></table></figure>
+<p>连接成功</p>
+<p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722205211789.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722205211789"></p>
+<p><img src="/2022/07/22/Introduction/wsl2-visualization/wsl2-visualization/image-20220722205304149.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722205304149"></p>
+<p>并且两个之间应该是互不影响的，配置完成后Gnome仍可使用。</p>
 <h2 id="遇见问题以及解决"><a class="markdownIt-Anchor" href="#遇见问题以及解决"></a> 遇见问题以及解决</h2>
-<h3 id="运行gnome-session仍然黑屏"><a class="markdownIt-Anchor" href="#运行gnome-session仍然黑屏"></a> 运行<code>gnome-session</code>仍然黑屏</h3>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_24310247/article/details/115604727">https://blog.csdn.net/qq_24310247/article/details/115604727</a></p>
+<h3 id="运行gnome-session-vcxsrv-仍然黑屏"><a class="markdownIt-Anchor" href="#运行gnome-session-vcxsrv-仍然黑屏"></a> 运行<code>gnome-session</code>+ VcXsrv 仍然黑屏</h3>
+<p>参考【5】：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_24310247/article/details/115604727">https://blog.csdn.net/qq_24310247/article/details/115604727</a></p>
 <p>在防火墙通过VX应用即可，</p>
 <p>windos安全中心——防火墙和网络保护——允许应用通过防火墙</p>
 <p>即可</p>
 <h3 id="warning-using-null-backend-for-session-tracking"><a class="markdownIt-Anchor" href="#warning-using-null-backend-for-session-tracking"></a> WARNING: Using null backend for session tracking</h3>
 <p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722194659111.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722194659111"></p>
-<p>此问题在<a target="_blank" rel="noopener" href="https://blog.csdn.net/liyunxin_c_language/article/details/114107994#:~:text=WSL2%20%E6%B7%BB%E5%8A%A0%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%20m0_46161993%E7%9A%84%E5%8D%9A%E5%AE%A2%204443%20VcXsrv%20%2B%20xfce4,%2B%20x%20ubuntu%20%E9%A6%96%E5%85%88%E4%B8%8B%E8%BD%BDVcXsrv%2C%20%E7%84%B6%E5%90%8E%E5%90%AF%E5%8A%A8XLaunch%E3%80%82%20%E5%90%AF%E5%8A%A8%E7%9A%84%E6%97%B6%E5%80%99%E9%80%89%E5%B7%A6%E4%B8%8B%E9%82%A3%E4%B8%AAone%20window%EF%BC%8C%20display%E9%87%8C%E6%8A%8A-1%E6%94%B9%E6%88%900%E3%80%82">此处</a> 给了比较好的解答，即在wsl2中安装<code>systemd</code>，而具体问题之前也提到过，gnome桌面是基于<code>systemd</code>，而WSL不支持<code>systemd</code>，所以需要先安装<code>systemd</code>。</p>
-<p>具体安装方式可以参照<a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">博客</a>,具体命令如下：</p>
+<p>此问题在<a target="_blank" rel="noopener" href="https://blog.csdn.net/liyunxin_c_language/article/details/114107994#:~:text=WSL2%20%E6%B7%BB%E5%8A%A0%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%20m0_46161993%E7%9A%84%E5%8D%9A%E5%AE%A2%204443%20VcXsrv%20%2B%20xfce4,%2B%20x%20ubuntu%20%E9%A6%96%E5%85%88%E4%B8%8B%E8%BD%BDVcXsrv%2C%20%E7%84%B6%E5%90%8E%E5%90%AF%E5%8A%A8XLaunch%E3%80%82%20%E5%90%AF%E5%8A%A8%E7%9A%84%E6%97%B6%E5%80%99%E9%80%89%E5%B7%A6%E4%B8%8B%E9%82%A3%E4%B8%AAone%20window%EF%BC%8C%20display%E9%87%8C%E6%8A%8A-1%E6%94%B9%E6%88%900%E3%80%82">此处</a> [2]给了比较好的解答，即在wsl2中安装<code>systemd</code>，而具体问题之前也提到过，gnome桌面是基于<code>systemd</code>，而WSL不支持<code>systemd</code>，所以需要先安装<code>systemd</code>。</p>
+<p>具体安装方式可以参照<a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">博客</a>[3],具体命令如下：</p>
 <ul>
 <li>
 <p>安装git</p>
@@ -406,6 +426,11 @@
 <h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/HackEle/article/details/122572418">https://blog.csdn.net/HackEle/article/details/122572418</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/liyunxin_c_language/article/details/114107994">https://blog.csdn.net/liyunxin_c_language/article/details/114107994</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">https://www.5axxw.com/wiki/content/k34hu0</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_24310247/article/details/115604727">https://blog.csdn.net/qq_24310247/article/details/115604727</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/149501381">https://zhuanlan.zhihu.com/p/149501381</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43726212/article/details/115979628">https://blog.csdn.net/qq_43726212/article/details/115979628</a></li>
 </ol>
 
               
