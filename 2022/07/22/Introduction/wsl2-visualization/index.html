@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/article/configs/figlet-WSL-2-IS-AWESOME!.png">
 <meta property="article:published_time" content="2022-07-22T10:53:30.000Z">
-<meta property="article:modified_time" content="2022-07-22T12:36:21.798Z">
+<meta property="article:modified_time" content="2022-07-22T12:39:30.563Z">
 <meta property="article:author" content="BFlame">
 <meta property="article:tag" content="Configs">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          2k 字
+          2.2k 字
         
       </span>
     
@@ -255,7 +255,7 @@
         
         
           <!-- compatible with older versions-->
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -334,7 +334,9 @@
 </li>
 </ol>
 <p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722184810793.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722184810793"></p>
-<p>若您已经安装在了C盘，还可使用该<a target="_blank" rel="noopener" href="https://github.com/DDoSolitary/LxRunOffline">项目</a>，根据说明即可。</p>
+<p>若您已经安装在了C盘，还可使用该<a target="_blank" rel="noopener" href="https://github.com/DDoSolitary/LxRunOffline">项目</a>，根据说明即可。<br>
+<code>./LxRunOffline m -n Ubuntu -d E:\Ubuntu</code><br>
+将Ubuntu迁移到E:\Ubuntu</p>
 <h2 id="图形界面配置"><a class="markdownIt-Anchor" href="#图形界面配置"></a> 图形界面配置</h2>
 <p>网上的很多教程都是安装轻量的 xfce4 桌面，Xfce 虽然很轻量级，但是不够现代，界面风格太丑了，看起来有点过时了。想要传统的 Ubuntu 体验，那就请安装GNOME桌面环境，本教程将指导您安装 Ubuntu 的默认桌面环境 GNOME。</p>
 <p>WSL2 中的 Ubuntu 20.04 不能运行默认版本的 GNOME，原因是：sudo apt install 默认安装的 GNOME 版本是高于3.34的，GNOME 从 3.34 版本开始就完全依赖 systemd 了，WSL2中是没有systemd的，自然也就运行不了新版的 GNOME。所以这里要先想办法让 systemd 可以使用。</p>
@@ -356,7 +358,7 @@
 <p>经过一段时间的下载安装后……</p>
 <p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722192404053.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722192404053"></p>
 <p>打开.bashrc 文件，<code>vi ~/.bashrc</code> 并添加下面执行命令到文件末尾</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">export DISPLAY=<span class="hljs-constructor">$(<span class="hljs-params">cat</span> <span class="hljs-operator">/</span><span class="hljs-params">etc</span><span class="hljs-operator">/</span><span class="hljs-params">resolv</span>.<span class="hljs-params">conf</span> | <span class="hljs-params">grep</span> <span class="hljs-params">nameserver</span> | <span class="hljs-params">awk</span> &#x27;&#123;<span class="hljs-params">print</span> $2&#125;&#x27;)</span>:<span class="hljs-number">0</span><br>export LIBGL_ALWAYS_INDIRECT=<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DISPLAY</span>=$(cat /etc/resolv.conf | grep nameserver | awk <span class="hljs-string">&#x27;&#123;print $2&#125;&#x27;</span>):0.0;<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_SESSION_TYPE</span>=<span class="hljs-string">&quot;x11&quot;</span><br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_RUNTIME_DIR</span>=~/xdg<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_SESSION_CLASS</span>=<span class="hljs-string">&quot;user&quot;</span><br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_SESSION_DESKTOP</span>=ubuntu<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_CURRENT_DESKTOP</span>=ubuntu:GNOME<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DESKTOP_SESSION</span>=ubuntu<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GDMSESSION</span>=ubuntu<br></code></pre></td></tr></table></figure>
 <p>执行成功后，我重启ubuntu。在 Windows 终端中打开一个新的 PowerShell 窗口输入</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">wsl <span class="hljs-comment">--shutdown</span><br> wsl -l -v<br></code></pre></td></tr></table></figure>
 <p>可见的确是关闭了，随后重启ubuntu</p>
