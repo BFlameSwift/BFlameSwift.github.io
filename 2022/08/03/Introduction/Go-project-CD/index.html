@@ -18,26 +18,26 @@
   <meta name="author" content="BFlame">
   <meta name="keywords" content="">
   
-    <meta name="description" content="简单记录wsl2安装到非默认盘的方法以及使用Gnome+VcXsrv&#x2F;Xrdp 的wsl2图形界面配置">
+    <meta name="description" content="简单记录Go项目基于Air工具持续部署到服务器的操作,并在服务器上简单测试.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wsl2简单配置">
-<meta property="og:url" content="http://example.com/2022/07/22/Introduction/wsl2-visualization/index.html">
+<meta property="og:title" content="利用Github Action 持续部署Go项目">
+<meta property="og:url" content="http://example.com/2022/08/03/Introduction/Go-project-CD/index.html">
 <meta property="og:site_name" content="BFlameSwift&#39;s Blog">
-<meta property="og:description" content="简单记录wsl2安装到非默认盘的方法以及使用Gnome+VcXsrv&#x2F;Xrdp 的wsl2图形界面配置">
+<meta property="og:description" content="简单记录Go项目基于Air工具持续部署到服务器的操作,并在服务器上简单测试.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/article/configs/figlet-WSL-2-IS-AWESOME!.png">
-<meta property="article:published_time" content="2022-07-22T10:53:30.000Z">
-<meta property="article:modified_time" content="2022-07-22T13:43:22.853Z">
+<meta property="og:image" content="http://example.com/img/article/configs/Github-Action.png">
+<meta property="article:published_time" content="2022-08-03T00:53:30.000Z">
+<meta property="article:modified_time" content="2022-08-03T01:10:04.785Z">
 <meta property="article:author" content="BFlame">
 <meta property="article:tag" content="Configs">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/article/configs/figlet-WSL-2-IS-AWESOME!.png">
+<meta name="twitter:image" content="http://example.com/img/article/configs/Github-Action.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Wsl2简单配置 - BFlameSwift&#39;s Blog</title>
+  <title>利用Github Action 持续部署Go项目 - BFlameSwift&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -208,13 +208,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/article/configs/figlet-WSL-2-IS-AWESOME!.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/article/configs/Github-Action.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Wsl2简单配置"></span>
+            <span id="subtitle" data-typed-text="利用Github Action 持续部署Go项目"></span>
           
         </div>
 
@@ -230,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-22 18:53" pubdate>
-          2022年7月22日 晚上
+        <time datetime="2022-08-03 08:53" pubdate>
+          2022年8月3日 早上
         </time>
       </span>
     
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          3.2k 字
+          2.2k 字
         
       </span>
     
@@ -301,143 +301,75 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Wsl2简单配置</h1>
+            <h1 style="display: none">利用Github Action 持续部署Go项目</h1>
             
               <p class="note note-info">
                 
                   
                     <!-- compatible with older versions-->
-                    本文最后更新于：2022年7月22日 晚上
+                    本文最后更新于：2022年8月3日 上午
                   
                 
               </p>
             
             <div class="markdown-body">
               
-              <h1 id="wsl2简单配置"><a class="markdownIt-Anchor" href="#wsl2简单配置"></a> Wsl2简单配置</h1>
-<h2 id="wsl2-安装"><a class="markdownIt-Anchor" href="#wsl2-安装"></a> wsl2 安装</h2>
-<ol>
-<li>在<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">微软网站</a> 手动下载安装包，此处以Ubuntu18为例</li>
-</ol>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722183926455.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722183926455"></p>
-<ol start="2">
-<li>
-<p>将其移动到你需要的盘，并更改后缀appx为zip，后解压</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722184359221.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722184359221"></p>
-</li>
-<li>
-<p>双击运行<code>ubuntu1804.exe</code></p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722184525374.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722184525374"></p>
-</li>
-<li>
-<p>安装成功，并使用<code>wsl -l -v</code> 查看</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722184635175.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722184635175"></p>
-</li>
-</ol>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722184810793.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722184810793"></p>
-<p>若您已经安装在了C盘，还可使用该<a target="_blank" rel="noopener" href="https://github.com/DDoSolitary/LxRunOffline">项目</a>，根据说明即可。<br>
-<code>./LxRunOffline m -n Ubuntu -d E:\Ubuntu</code><br>
-将Ubuntu迁移到E:\Ubuntu</p>
-<h2 id="图形界面配置"><a class="markdownIt-Anchor" href="#图形界面配置"></a> 图形界面配置</h2>
-<p>网上的很多教程都是安装轻量的 xfce4 桌面，Xfce 虽然很轻量级，但是不够现代，界面风格太丑了，看起来有点过时了。想要传统的 Ubuntu 体验，那就请安装GNOME桌面环境，本教程将指导您安装 Ubuntu 的默认桌面环境 GNOME。</p>
-<p>WSL2 中的 Ubuntu 20.04 不能运行默认版本的 GNOME，原因是：sudo apt install 默认安装的 GNOME 版本是高于3.34的，GNOME 从 3.34 版本开始就完全依赖 systemd 了，WSL2中是没有systemd的，自然也就运行不了新版的 GNOME。所以这里要先想办法让 systemd 可以使用。</p>
-<p>而本人虽然安装了Ubuntu2004的双系统，但是wsl2跑docker还是比较好用的。因此对我来讲图形界面也是比较必要的。正好<a target="_blank" rel="noopener" href="https://github.com/Couteau69586">Couteau</a>教我用Gnome + xrdp的方案解决，下面简单记录使用过程:</p>
-<p>个人环境是windows 11 其中wsl2为ubuntu2004</p>
-<h3 id="更新系统包版本"><a class="markdownIt-Anchor" href="#更新系统包版本"></a> 更新系统包版本</h3>
-<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">sudo apt <span class="hljs-meta">update</span> <span class="hljs-variable">&amp;&amp;</span> sudo apt upgrade -y<br></code></pre></td></tr></table></figure>
-<h3 id="安装多线程下载工具"><a class="markdownIt-Anchor" href="#安装多线程下载工具"></a> 安装多线程下载工具</h3>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo apt <span class="hljs-keyword">install</span> axel<br></code></pre></td></tr></table></figure>
-<p>可以提升安装包下载速度</p>
-<h3 id="安装apt-fast"><a class="markdownIt-Anchor" href="#安装apt-fast"></a> 安装apt-fast</h3>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs smali">sudo<span class="hljs-built_in"> add-apt-repository </span>ppa:apt-fast/stable<br>sudo apt -y install apt-fast<br></code></pre></td></tr></table></figure>
-<p>此处选择使用apt-fast替换apt</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722192023341.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722192023341"></p>
-<p>设置最大连接数为5，并选择Yes</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722192053799.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722192053799"></p>
-<h3 id="安装gnome"><a class="markdownIt-Anchor" href="#安装gnome"></a> 安装Gnome</h3>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo apt-fast <span class="hljs-keyword">install</span> ubuntu-desktop gnome<br></code></pre></td></tr></table></figure>
-<p>经过一段时间的下载安装后……</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722192404053.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722192404053"></p>
-<p>打开.bashrc 文件，<code>vi ~/.bashrc</code> 并添加下面执行命令到文件末尾</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DISPLAY</span>=$(cat /etc/resolv.conf | grep nameserver | awk <span class="hljs-string">&#x27;&#123;print $2&#125;&#x27;</span>):0.0;<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_SESSION_TYPE</span>=<span class="hljs-string">&quot;x11&quot;</span><br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_RUNTIME_DIR</span>=~/xdg<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_SESSION_CLASS</span>=<span class="hljs-string">&quot;user&quot;</span><br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_SESSION_DESKTOP</span>=ubuntu<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XDG_CURRENT_DESKTOP</span>=ubuntu:GNOME<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DESKTOP_SESSION</span>=ubuntu<br><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GDMSESSION</span>=ubuntu<br></code></pre></td></tr></table></figure>
-<p>执行成功后，我重启ubuntu。在 Windows 终端中打开一个新的 PowerShell 窗口输入</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">wsl <span class="hljs-comment">--shutdown</span><br> wsl -l -v<br></code></pre></td></tr></table></figure>
-<p>可见的确是关闭了，随后重启ubuntu</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722192839902.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722192839902"></p>
-<h3 id="安装vcxsrv"><a class="markdownIt-Anchor" href="#安装vcxsrv"></a> 安装vcxsrv</h3>
-<p><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a></p>
-<p>下载并安装安装包</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722193205132.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722193205132"></p>
-<p>打开XLaunch（VcXsrv的应用名），进行如下设置</p>
-<p>选择One large window或One window without titlebar。display number中输入 0。</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722193424427.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722193424427"></p>
-<p>选中禁用访问控制，<strong>Disable Access Control</strong> ，否则会无法访问</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722193516425.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722193516425"></p>
-<p>配置完成后会出现一个大黑框，此时再terminal中输入</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo gnome-session</span><br></code></pre></td></tr></table></figure>
-<p>等待数分钟， gnome 连接完成即可进入Ubuntu GNome桌面环境了</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722202954549.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722202954549"></p>
-<p>不过可能遇到些许问题，最后给出我遇到的两个问题。</p>
-<h2 id="xrdp"><a class="markdownIt-Anchor" href="#xrdp"></a> Xrdp</h2>
-<p>参考教程[5]：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/149501381">https://zhuanlan.zhihu.com/p/149501381</a></p>
-<p>个人觉得VcXsrv有些麻烦，尝试下Xrdp</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>sudo apt update<br><span class="hljs-variable">$ </span>sudo apt install -y xfce4 xrdp<br></code></pre></td></tr></table></figure>
-<img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722204606109.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722204606109" style="zoom:67%;">
-<h3 id="修改xrdp默认端口"><a class="markdownIt-Anchor" href="#修改xrdp默认端口"></a> 修改xrdp默认端口</h3>
-<p>由于<code>xrdp</code>安装好后默认配置使用的是和Windows远程桌面相同的<code>3389</code> 端口,为了防止和Windows系统远程桌面冲突,建议修改成其他的端口</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ sudo vim <span class="hljs-regexp">/etc/</span>xrdp/xrdp.ini<br><span class="hljs-comment"># 修改下面这一行,将默认的3389改成其他端口即可</span><br>port=<span class="hljs-number">3390</span><br></code></pre></td></tr></table></figure>
-<h2 id="为当前用户指定登录session类型"><a class="markdownIt-Anchor" href="#为当前用户指定登录session类型"></a> # 为当前用户指定登录session类型</h2>
-<p><strong>注意这一步很重要,如果不设置的话会导致后面远程桌面连接上闪退</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ vim ~/.xsession<br><br><span class="hljs-comment"># 写入下面内容(就一行)</span><br>xfce4-session<br></code></pre></td></tr></table></figure>
-<h3 id="启动服务"><a class="markdownIt-Anchor" href="#启动服务"></a> 启动服务</h3>
-<p>若你的wsl未安装<code>systemd</code>,需要手动启动</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo <span class="hljs-regexp">/etc/i</span>nit.d/xrdp start<br></code></pre></td></tr></table></figure>
-<p>若安装了<code>systemd</code>，则可以[6]使用如下命令：</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo systemctl <span class="hljs-keyword">enable</span> xrdp<br>sudo systemctl <span class="hljs-keyword">restart</span> xrdp<br></code></pre></td></tr></table></figure>
-<p>（不过我这里的开机启动还是不好使，每次使用需要<code>sudo systemctl restart xrdp</code></p>
-<p>Win+R 输入<code>mstsc</code> 打开远程桌面连接，输入`localhost:port port为上面你修改的port,此处为3390</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722213800671.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722213800671"></p>
-<p>按照提示输入用户名，密码 ，即可连接成功</p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722205211789.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722205211789"></p>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722205304149.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722205304149"></p>
-<p>并且两个之间应该是互不影响的，配置完成后Gnome仍可使用。</p>
-<h2 id="遇见问题以及解决"><a class="markdownIt-Anchor" href="#遇见问题以及解决"></a> 遇见问题以及解决</h2>
-<h3 id="运行gnome-session-vcxsrv-仍然黑屏"><a class="markdownIt-Anchor" href="#运行gnome-session-vcxsrv-仍然黑屏"></a> 运行<code>gnome-session</code>+ VcXsrv 仍然黑屏</h3>
-<p>参考【5】：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_24310247/article/details/115604727">https://blog.csdn.net/qq_24310247/article/details/115604727</a></p>
-<p>在防火墙通过VX应用即可，</p>
-<p>windos安全中心——防火墙和网络保护——允许应用通过防火墙</p>
-<p>即可</p>
-<h3 id="warning-using-null-backend-for-session-tracking"><a class="markdownIt-Anchor" href="#warning-using-null-backend-for-session-tracking"></a> WARNING: Using null backend for session tracking</h3>
-<p><img src="/2022/07/22/Introduction/wsl2-visualization/image-20220722194659111.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220722194659111"></p>
-<p>此问题在<a target="_blank" rel="noopener" href="https://blog.csdn.net/liyunxin_c_language/article/details/114107994#:~:text=WSL2%20%E6%B7%BB%E5%8A%A0%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%20m0_46161993%E7%9A%84%E5%8D%9A%E5%AE%A2%204443%20VcXsrv%20%2B%20xfce4,%2B%20x%20ubuntu%20%E9%A6%96%E5%85%88%E4%B8%8B%E8%BD%BDVcXsrv%2C%20%E7%84%B6%E5%90%8E%E5%90%AF%E5%8A%A8XLaunch%E3%80%82%20%E5%90%AF%E5%8A%A8%E7%9A%84%E6%97%B6%E5%80%99%E9%80%89%E5%B7%A6%E4%B8%8B%E9%82%A3%E4%B8%AAone%20window%EF%BC%8C%20display%E9%87%8C%E6%8A%8A-1%E6%94%B9%E6%88%900%E3%80%82">此处</a> [2]给了比较好的解答，即在wsl2中安装<code>systemd</code>，而具体问题之前也提到过，gnome桌面是基于<code>systemd</code>，而WSL不支持<code>systemd</code>，所以需要先安装<code>systemd</code>。</p>
-<p>具体安装方式可以参照<a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">博客</a>[3],具体命令如下：</p>
+              <h1 id="利用github-action-持续部署go项目"><a class="markdownIt-Anchor" href="#利用github-action-持续部署go项目"></a> 利用Github Action 持续部署Go项目</h1>
+<h2 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h2>
+<p>Github 针对开发者提供了很多免费的实用工具，Github Action 就是其中之一。你可以将其理解为一个特殊的脚本，在满足一定条件的时候它就会执行（例如检测到对某一分支的push，到达了一天的0点等）。</p>
+<p>在网站开发中，后端经常需要把刚写完的内容同步至服务器端供前端测试，如果手动部署，则需要先连接服务器，然后<code>git pull</code>，再将后端运行起来。一次两次还好，多了之后会很浪费时间且比较枯燥。适当使用 Github Action 就可以把这个过程自动化，下面将介绍如何实现自动部署。</p>
+<p>本文介绍如何使用Go的工具Air来对Go项目进行热加载，即自动编译、重启程序，也可以达到自动部署的作用。</p>
+<h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h2>
+<p>事实上，Go项目（此处以一Gin项目为例）的部署，就是在服务器上关掉之前的后端服务，并重新打包<code>go build main.go</code> 并运行项目<code>./main &amp;</code>  即可。不过在自动化部署中，需要做到登录到服务器，并执行相应命令。</p>
+<p>在Commit触发workflow之前，<strong>首先</strong>需要配置<code>Secrets</code>,以下关于配置Secret的操作直接摘自<a target="_blank" rel="noopener" href="https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html">Marvolo’s Djangobook</a></p>
+<p>进入Github 里对应的仓库页面，点击<code>Settings-&gt;Secrets</code>（如果找不到Secrets，可能是权限不够，可以让仓库拥有者来操作）。这里存放的是这个仓库中的所需要的不对外公开的常量。点击创建新 Secrets：</p>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/202201192055029-16594878697501.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220119205528393"></p>
+<p>然后分别填入常量名和值：</p>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/image-20220803083733871-16594878697512.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220803083733871"></p>
+<p>这个时候就不能再看到这个常量的值了，只能修改或者删除。之所以这么操作，是考虑到之后仓库可能改成 public，为了避免服务器的信息泄露，于是使用了 Secrets 来做一个安全防护。关于Github Action的更具体使用可以查询官方文档或是其他关于Github Action的教程吧。</p>
+<p>个人目前的<code>.github/workflows/build.yml</code> 内容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">build</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [<span class="hljs-string">master</span>]<br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">setup</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">sudo</span> <span class="hljs-string">apt</span> <span class="hljs-string">install</span> <span class="hljs-string">sshpass</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">pull</span> <span class="hljs-string">and</span> <span class="hljs-string">build</span><br>        <span class="hljs-attr">env:</span><br>          <span class="hljs-attr">GO:</span> <span class="hljs-string">/usr/local/go/bin/go</span><br><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          sshpass -p $&#123;&#123;secrets.PASSWORD&#125;&#125; ssh -o StrictHostKeyChecking=no root@$&#123;&#123;secrets.IP&#125;&#125; &quot;cd /opt/Project/Gin-demo; git config --global http.postBuffer 1048576000;git pull&quot;</span><br><span class="hljs-string"></span><br></code></pre></td></tr></table></figure>
+<p>上面的工作流具体做了几件事：	登录到服务器、打开指定目录，pull仓库到本地。</p>
+<p>对于本方案的工作流执行到这里已经够了，因为我们使用了Air工具，当代码更新，会自动进行热加载程序，达到部署的目的。具体内容在下一章节介绍</p>
+<h1 id="基于air的热加载"><a class="markdownIt-Anchor" href="#基于air的热加载"></a> 基于Air的热加载</h1>
+<p>​	关于Air的简单介绍与使用可以参见[2]， 简单来讲，若没有使用2，当修改了代码后，需要重新编译运行才能得到更新后的程序。而使用了air后，在命令行使用<code>air</code> 便可以运行程序，并能<strong>热更新程序</strong>，（类似Django）</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>air<br></code></pre></td></tr></table></figure>
+<h2 id="air的配置"><a class="markdownIt-Anchor" href="#air的配置"></a> Air的配置</h2>
+<ul>
+<li>安装Air（当然，linux要<strong>设置好GOPATH并添加环境变量</strong>），具体方式参见[3]</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">go</span> <span class="hljs-string">install</span> <span class="hljs-string">github.com/cosmtrek/air@latest</span><br></code></pre></td></tr></table></figure>
 <ul>
 <li>
-<p>安装git</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo apt <span class="hljs-keyword">install</span> git<br></code></pre></td></tr></table></figure>
-</li>
-<li>
-<p>运行如下命令</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/DamionGans/u</span>buntu-wsl2-systemd-script.git<br>cd ubuntu-wsl2-systemd-script/<br>bash ubuntu-wsl2-systemd-script.sh<br><span class="hljs-comment"># Enter your password and wait until the script has finished</span><br></code></pre></td></tr></table></figure>
-<p><strong>然后重新启动</strong>ubuntu shell并尝试运行systemctl</p>
-<p>powershell中关闭wsl</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">wsl <span class="hljs-comment">--shutdown</span><br>wsl -l -v<br></code></pre></td></tr></table></figure>
+<p>Air的使用</p>
+<p>初始化配置文件：在项目根目录下运行：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">air <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/image-20220802234902161-16594878697525.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220802234902161"></p>
 </li>
 </ul>
-<p>​	运行systemctl</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">systemctl</span><br></code></pre></td></tr></table></figure>
-<p>没有错误的话即可运行</p>
+<p>​	会在根目录下生成了配置文件<code>.air.toml</code>，个人将<code>.air.toml</code>加入到<code>.gitignore</code>中防止不同系统相互影响，此时直接运行<code>air</code> 往往会向<code>./tmp/</code>目录下build文件，而与本<code>Gin-demo</code>默认为项目根目录的意味不符，于是我们修改配置文件</p>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/image-20220803001518497-16594878697527.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220803001518497"></p>
+<p>修改为如下代码即可</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># Windows  </span><br> <span class="hljs-attr">bin</span> = <span class="hljs-string">&quot;main.exe&quot;</span><br> <span class="hljs-attr">cmd</span> = <span class="hljs-string">&quot;go build -o ./main.exe .&quot;</span><br><span class="hljs-comment"># linux</span><br> <span class="hljs-attr">bin</span> = <span class="hljs-string">&quot;main&quot;</span><br> <span class="hljs-attr">cmd</span> = <span class="hljs-string">&quot;go build -o ./main .&quot;</span><br></code></pre></td></tr></table></figure>
+<p>随后项目成功运行</p>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/image-20220802235413629-16594878697528.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220802235413629"></p>
+<p>若配置好了之前的基本内容。此时提交到分支<code>master</code>便可以实现持续部署了。随后个人进行简单测试</p>
+<p>具体测试如下：</p>
+<p>最新提交中，我将Gin-demo中的HelloGin的代码进行修改：</p>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/image-20220803002511985-16594878697529.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220803002511985"></p>
+<p>等到workflows结束后，访问<code>ip:port/hello</code>,发现内容已经更改，表示已经部署成功。此外经过在部署前后查看进程的PID发现发生了变化，可见热重启发挥了作用。</p>
+<p><img src="/2022/08/03/Introduction/Go-project-CD/image-20220803002606531-165948786975210.png" srcset="/img/configs/loading.gif" lazyload alt="image-20220803002606531"></p>
+<p>最后我在查询资料的途中，发现了<a target="_blank" rel="noopener" href="https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/">另一种自动部署方法</a>， 读者可以自行尝试，不过个人觉得原理类似，但是配置相对Air更繁琐，不过多赘述。</p>
 <h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/HackEle/article/details/122572418">https://blog.csdn.net/HackEle/article/details/122572418</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/liyunxin_c_language/article/details/114107994">https://blog.csdn.net/liyunxin_c_language/article/details/114107994</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.5axxw.com/wiki/content/k34hu0">https://www.5axxw.com/wiki/content/k34hu0</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_24310247/article/details/115604727">https://blog.csdn.net/qq_24310247/article/details/115604727</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/149501381">https://zhuanlan.zhihu.com/p/149501381</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43726212/article/details/115979628">https://blog.csdn.net/qq_43726212/article/details/115979628</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39917046/article/details/111140079?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-111140079-blog-115979628.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-111140079-blog-115979628.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=1">XRDP 省略输入密码步骤</a></li>
-</ol>
-
+<p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/190812851">Makefile使用</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://studygolang.com/articles/30962">Air 简单介绍</a></p>
+<p>[3] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_15437667/article/details/80482035">设置GOPATH</a></p>
+<p>[4] <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/45215fe48030">Air的简单使用</a></p>
+<p>[5] <a target="_blank" rel="noopener" href="https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/">另一种Go项目自动部署方法</a></p>
+<p>[6] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/ztshuai/p/12810375.html">Air配置文件详细介绍</a></p>
+<p>[7] <a target="_blank" rel="noopener" href="https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html">Marvolo’s Djangobook</a></p>
+<script src="https://utteranc.es/client.js" repo="Super-BUAA-2021/GinBook" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
               
             </div>
             <hr/>
@@ -481,8 +413,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Wsl2简单配置</div>
-      <div>http://example.com/2022/07/22/Introduction/wsl2-visualization/</div>
+      <div>利用Github Action 持续部署Go项目</div>
+      <div>http://example.com/2022/08/03/Introduction/Go-project-CD/</div>
     </div>
     <div class="license-meta">
       
@@ -494,7 +426,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月22日</div>
+          <div>2022年8月3日</div>
         </div>
       
       
@@ -524,18 +456,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/03/Introduction/Go-project-CD/" title="利用Github Action 持续部署Go项目">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">利用Github Action 持续部署Go项目</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/10/17/Optimization/Optimization-Simplex-method/" title="Optimization Simplex method">
-                        <span class="hidden-mobile">Optimization Simplex method</span>
+                      <a href="/2022/07/22/Introduction/wsl2-visualization/" title="Wsl2简单配置">
+                        <span class="hidden-mobile">Wsl2简单配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
